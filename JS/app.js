@@ -38,7 +38,7 @@ function mostrarCatalogo() {
     });
 }
 
-// Manejador de eventos utilizando la propagación de eventos para el botón "Agregar al Carrito"
+// botón "Agregar al Carrito"
 catalogo.addEventListener("click", (event) => {
     if (event.target.classList.contains("agregar-carrito-btn")) {
         const index = event.target.getAttribute("data-index");
@@ -53,20 +53,19 @@ catalogo.addEventListener("click", (event) => {
     }
 });
 
-// Manejador de eventos para el botón "Limpiar Carrito"
+// botón "Limpiar Carrito"
 limpiarCarritoButton.addEventListener("click", () => {
     carrito = [];
     actualizarCarrito();
     mostrarMensaje("El carrito ha sido limpiado.");
 });
 
-// Manejador de eventos para el botón "Finalizar Compra"
+//botón "Finalizar Compra"
 finalizarCompraButton.addEventListener("click", () => {
     const precioTotal = calcularPrecioTotal();
     if (precioTotal > 0) {
         mostrarMensaje(`¡Compra finalizada! Precio total: $${precioTotal.toFixed(2)}`);
-        // Aquí puedes agregar lógica adicional, como enviar la orden a un servidor, etc.
-        // Después de finalizar la compra, generalmente querrías limpiar el carrito:
+      
         carrito = [];
         actualizarCarrito();
     } else {
@@ -151,7 +150,7 @@ function cargarCarritoDesdeStorage() {
     }
 }
 
-// Inicialización
+
 mostrarCatalogo();
 cargarCarritoDesdeStorage();
-agregarEventosQuitar();  // Agregar eventos al inicio
+agregarEventosQuitar(); 
