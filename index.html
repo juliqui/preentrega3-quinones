@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda en Línea</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+<body class="bg-light">
+    <div class="container">
+        <header class="text-center mt-5 mb-4">
+            <h1 class="display-4">¡Bienvenido a nuestra tienda en línea!</h1>
+        </header>
+
+        <main class="d-flex justify-content-between">
+            <section class="catalogo col-md-8" id="catalogo"></section>
+
+            <section class="carrito col-md-4">
+                <h2 class="mb-3">Carrito de Compras:</h2>
+                <ul id="carrito" class="list-group mb-3"></ul>
+                <p id="total" class="font-weight-bold mb-3">Precio total de su compra: $0</p>
+
+                <!-- Nueva opción para valores de envío -->
+                <div class="form-group">
+                    <label for="envio">Costo de envío:</label>
+                    <select class="form-control" id="envio">
+                        <option value="0">Envío estándar - $0</option>
+                        <option value="5">Envío rápido - $5</option>
+                        <option value="10">Envío exprés - $10</option>
+                    </select>
+                </div>
+
+                <button type="button" id="finalizarCompra" class="btn btn-success btn-block">
+                    <i class="fas fa-shopping-cart"></i> Finalizar Compra
+                </button>
+
+                <!-- Nueva opción para quitar elementos del carrito -->
+                <button type="button" id="limpiarCarrito" class="btn btn-danger btn-block mt-3">
+                    <i class="fas fa-trash"></i> Limpiar Carrito
+                </button>
+            </section>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS y Popper.js (necesarios para Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js"></script>
+    
+    <script src="/JS/app.js"></script>
+</body>
+</html>
